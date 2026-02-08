@@ -28,6 +28,10 @@ img{
     width: 50px;
 }
 
+p{
+    opacity: 0.8;
+}
+
 .c-1{
     background-color: rgba(230, 126, 34, 1);
 }
