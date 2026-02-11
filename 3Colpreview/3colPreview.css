@@ -63,3 +63,16 @@ button{
 .c-3 button{
     color: rgba(0, 77, 80, 1);
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}

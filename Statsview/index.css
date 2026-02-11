@@ -84,3 +84,42 @@ body {
   inset: 0;
   background: rgba(242, 85, 247, 0.737);
 }
+
+
+
+@media (max-width: 768px) {
+
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .card-left {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .card-left h1 {
+    font-size: 28px;
+  }
+
+  .card-left p {
+    font-size: 14px;
+  }
+
+  .card-bottom {
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .card-right {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+}

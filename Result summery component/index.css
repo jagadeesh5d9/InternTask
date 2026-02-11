@@ -1,36 +1,32 @@
-
 body {
-  margin: 0px;
+  margin: 0;
   background-color: #eef2ff;
-  padding: 0px;
   font-family: Arial, sans-serif;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
+
 .card {
-  width: 700px;
-  height: 450px;
+  width: 100%;
+  max-width: 700px;
   background-color: white;
   display: flex;
   border-radius: 25px;
-  /* box-shadow: 0 20px 90px rgba(0,0,0,0.1); */
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
 
 .card-left {
-  width: 50%;
-  background: linear-gradient(
-    to bottom,
-    #6a5cff,
-    #2f2ce9
-  );
+  flex: 1;
+  background: linear-gradient(to bottom, #6a5cff, #2f2ce9);
   color: white;
   padding: 30px;
   text-align: center;
@@ -38,18 +34,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  border-radius: 25px;
 }
 
-.muted {
-  opacity: 0.8;
+
+.card-right {
+  flex: 1;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
 
 .circle {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+  margin: 20px auto;
   border-radius: 50%;
   background: rgba(0,0,0,0.2);
 
@@ -61,7 +62,7 @@ body {
 
 .circle h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 44px;
 }
 
 .circle span {
@@ -74,15 +75,6 @@ body {
   opacity: 0.85;
 }
 
-.card-right {
-  width: 50%;
-  padding: 30px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 .summary {
   display: flex;
   justify-content: space-between;
@@ -91,25 +83,10 @@ body {
   font-size: 14px;
 }
 
-.reaction {
-  background-color: #fff6f5;
-  color: #d64545;
-}
-
-.memory {
-  background-color: #fffbf0;
-  color: #e3a008;
-}
-
-.verbal {
-  background-color: #f2fbfa;
-  color: #1fa188;
-}
-
-.visual {
-  background-color: #f3f3fd;
-  color: #4b5bdc;
-}
+.reaction { background-color: #fff6f5; color: #d64545; }
+.memory { background-color: #fffbf0; color: #e3a008; }
+.verbal { background-color: #f2fbfa; color: #1fa188; }
+.visual { background-color: #f3f3fd; color: #4b5bdc; }
 
 button {
   margin-top: auto;
@@ -119,5 +96,28 @@ button {
   background-color: #303b5a;
   color: white;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+
+  .card {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .card-left,
+  .card-right {
+    padding: 25px;
+  }
+
+  .circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .circle h1 {
+    font-size: 36px;
+  }
 }
